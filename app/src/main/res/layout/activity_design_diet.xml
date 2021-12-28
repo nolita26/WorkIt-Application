@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddWorkoutSchedule">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="-40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/containerCard"
+        app:cardCornerRadius="30dp"
+        android:backgroundTint="#FB9101">
+        <com.smarteist.autoimageslider.SliderView
+            android:layout_width="match_parent"
+            android:id="@+id/imgView"
+            android:layout_height="170dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="24dp"
+            app:sliderIndicatorEnabled="true"
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderAnimationDuration="600"
+            app:sliderIndicatorSelectedColor="#FB9101"
+            app:sliderIndicatorUnselectedColor="@color/black"
+            app:sliderStartAutoCycle="true"
+            android:elevation="5dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:elevation="5dp"
+        app:cardCornerRadius="9dp"
+        android:id="@+id/cardDesign"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="-18dp"
+        app:layout_constraintStart_toStartOf="@+id/containerCard"
+        app:layout_constraintTop_toBottomOf="@+id/containerCard">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Design Diet"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_margin="5dp" />
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="27dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/close"
+        android:id="@+id/cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/containerCard" />
+
+    <ScrollView
+        android:id="@+id/containerScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/containerCard"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scrollConstrainL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/workoutTypeF"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="15dp"
+                android:hint="Food"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/detectBtn"
+                android:layout_width="72dp"
+                android:layout_height="37dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="8dp"
+                android:text="DETECT"
+                android:textSize="9dp"
+                app:layout_constraintBottom_toBottomOf="@+id/workoutTypeF"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <EditText
+                android:id="@+id/numberofSets"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="15dp"
+                android:hint="Calorie Count"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/workoutTypeF" />
+
+            <EditText
+                android:id="@+id/reps"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="15dp"
+                android:hint="Time"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/numberofSets"/>
+
+            <EditText
+                android:id="@+id/Date"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="15dp"
+                android:hint="Date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reps"/>
+
+            <EditText
+                android:id="@+id/durations"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="15dp"
+                android:hint="Duration"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Date"
+                android:visibility="gone"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/durations"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="35dp"
+                android:layout_marginTop="85dp"
+                android:layout_marginRight="45dp"
+                android:layout_marginLeft="45dp"
+                android:id="@+id/relId">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_height="45dp"
+                    android:layout_width="0dp"
+                    android:id="@+id/addMore"
+                    android:background="@drawable/addmorebg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintWidth_percent="0.45"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:theme="@style/Widget.MaterialComponents.Button.TextButton"
+                    app:backgroundTint="#FB9101"
+                    android:textColor="@color/white"
+                    android:elevation="5dp"
+                    android:textSize="18sp"
+                    android:text="Add More"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/viewALl"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintWidth_percent="0.45"
+                    android:background="@drawable/addmoreborder"
+                    android:textColor="#FB9101"
+                    android:elevation="5dp"
+                    android:text="VIEW" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

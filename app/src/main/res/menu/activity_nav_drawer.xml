@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_baseline_person_24"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_workout"
+            android:icon="@drawable/ic_baseline_directions_run_24"
+            android:title="Add Workout" />
+        <item
+            android:id="@+id/nav_diet"
+            android:icon="@drawable/ic_baseline_food_bank_24"
+            android:title="Add Diet" />
+        <item
+            android:id="@+id/nav_gym"
+            android:icon="@drawable/ic_baseline_map_24"
+            android:title="Gyms Near Me"
+            />
+        <item
+            android:title="Sync Up"
+            android:icon="@drawable/ic_baseline_sync_24"
+            android:id="@+id/nav_sync"
+            />
+
+        <item
+            android:title="Logout"
+            android:icon="@drawable/ic_baseline_login_24"
+            android:id="@+id/nav_logout"
+            />
+    </group>
+</menu>

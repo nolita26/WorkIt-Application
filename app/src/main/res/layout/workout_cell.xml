@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:backgroundTint="#D3D3D3"
+        app:cardCornerRadius="15dp"
+        android:id="@+id/cardCell"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/containerLayout">
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="15dp"
+            android:id="@+id/containerCard"
+            app:cardCornerRadius="8dp"
+            >
+
+            <ImageView
+                android:id="@+id/workoutImg"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/corner_radius"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+            <TextView
+                android:id="@+id/workoutTypeTV"
+                android:layout_width="0dp"
+                android:layout_height="19dp"
+                android:text="Weight Training"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/containerCard"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                app:layout_constraintTop_toTopOf="@+id/containerCard" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:id="@+id/exerciseTypeTV"
+                android:layout_height="19dp"
+                app:layout_constraintStart_toStartOf ="@+id/workoutTypeTV"
+                app:layout_constraintTop_toBottomOf="@+id/workoutTypeTV"
+                android:layout_marginTop="4dp"
+                android:text="Leg Press"
+                app:layout_constraintEnd_toEndOf="@+id/workoutTypeTV" />
+
+            <TextView
+                android:id="@+id/repsTV"
+                android:layout_width="0dp"
+                android:layout_height="19dp"
+                android:layout_marginTop="4dp"
+                android:text="Leg Press"
+                app:layout_constraintBaseline_toBottomOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/containerCard"
+                app:layout_constraintEnd_toEndOf="@+id/exerciseTypeTV"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/exerciseTypeTV"
+                app:layout_constraintTop_toBottomOf="@+id/exerciseTypeTV"
+                app:layout_constraintVertical_bias="0.8" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
