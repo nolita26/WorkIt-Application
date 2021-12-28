@@ -1,2 +1,3 @@
-# WorkIt-Application
-This application has a food/diet plan as well as a fitness design section that allows users to create and track their own diet and fitness plan. It uses a Machine learning model that detects foods based on a picture taken by the camera with 82.43% test accuracy. Other features include displaying nearby gyms, offline synchronization to avoid loss of data, a profile section to show overall statistics of one’s workouts and a notification system to remind users of scheduled workouts.
+# WorkIt Android
+
+Workout Android App
